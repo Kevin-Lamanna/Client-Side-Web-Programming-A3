@@ -1,0 +1,251 @@
+/*  JavaScript 6th Edition
+    Chapter 5
+    Chapter case
+
+    Photo gallery
+    Large format style sheet
+
+    Filename: photos.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   margin: 0 auto;
+   font-family: verdana, arial, helvetica, sans-serif;
+   /* background: black; */
+   /* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+   background-image: linear-gradient(to right, #0093E9 0%, #80D0C7 100%); 
+   /* background-image: linear-gradient(to right, rgba(0, 147, 233, 0.8) 0%, rgba(128, 208, 199, 0.8) 100%); */
+   position: relative;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* page header */
+header {
+   color: black;
+   font-weight: 600;
+   font-size: 3.7em;
+   padding-bottom: 50px;
+}
+
+header h1 {
+   text-align: center;
+   padding: 0.5em;
+}
+
+/* main content */
+article {
+   /* background: black; */
+   /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+   position: relative;
+   min-height: 45vh;
+   width: auto;
+
+}
+
+article h2 {
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: left;
+   margin: 0 0 10px 51px;
+}
+
+#leftarrow, #rightarrow {
+   /* background: #696565; */
+   background: black;
+   color: white;
+   position: absolute;
+   z-index: 30;
+   text-align: center;
+   height: 135px;
+   width: 40px;
+   top: 67px;
+   border-radius: 5px;
+}
+
+article div:hover {
+   cursor: default;
+}
+
+#leftarrow {
+   left: 0;
+}
+
+#rightarrow {
+   right: 0;
+}
+
+#fiveButton {
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 290px;
+   color: white;
+   text-align: center;
+}
+
+#fiveButton p {
+   width: 20%;
+   margin: 0 auto;
+   line-height: 2em;
+   /* background: #696565; */
+   background: black;
+   border-radius: 5px;
+}
+
+#leftarrow p, #rightarrow p {
+   position: relative;
+   top: 50%;
+   margin-top: -0.5em;
+}
+
+figure {
+   position: absolute;
+   -webkit-box-shadow: 10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   -moz-box-shadow:    10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+   box-shadow:         10px 0px 5px rgb(50, 50, 50),
+                       -10px 0px 5px rgb(50, 50, 50);
+}
+
+#fig2 {
+   z-index: 10;
+   left: 13%;
+   top: 34px;
+}
+
+#fig3 {
+   z-index: 20;
+   left: 50%;
+   margin-left: -240px;
+   top: 0;
+}
+
+#fig4 {
+   z-index: 10;
+   right: 13%;
+   top: 34px;
+}
+
+/* footer */
+#footer {
+   position: relative;
+   top: 100px;
+   /* margin-bottom: 5px; */
+   /* height: 2.5rem; */
+   font-size: 15px;
+   bottom: 0;
+   /* background: black; */
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+   text-align: center;
+}
+
+#favourites {
+   /* color: rgb(227,198,32); */
+   color:   rgb(255, 180, 40);
+   display: inline;
+   width: 100%;
+   position: relative;
+   top: 0;
+   text-align: center;
+   font-size: 275%;
+   padding-bottom: 2.5rem;
+   text-emphasis: bolder;
+   font-weight: 700;
+   
+}
+
+#favourites > div {
+   display: inline-block;
+   position:relative;
+   right: -45px;
+   padding: 10px;
+}
+
+#favourites  button {
+   /* background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% ); */
+   background-image: linear-gradient(to right, #ff512f, #f09819);
+   font-weight: 700;
+   border-radius: 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   border: 1px;
+}
+
+#favourites  button:hover {
+   /* background-image: linear-gradient(25deg,#d64c7f,#ee4758 50%); */
+   background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+}
